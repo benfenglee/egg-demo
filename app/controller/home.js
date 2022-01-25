@@ -3,6 +3,12 @@
 const Controller = require("egg").Controller;
 
 class HomeController extends Controller {
+  async home() {
+    const { ctx, service } = this;
+    const data = await service.curd.girl();
+    console.log(data);
+    ctx.body = data;
+  }
   async index() {
     const { ctx } = this;
     const params = {
