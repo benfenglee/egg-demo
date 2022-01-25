@@ -6,7 +6,7 @@ class HomeController extends Controller {
   async home() {
     const { ctx, service } = this;
     const data = await service.curd.girl();
-    console.log(data);
+    // console.log(data);
     ctx.body = data;
   }
   async index() {

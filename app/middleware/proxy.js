@@ -2,7 +2,7 @@
 
 module.exports = (options) => {
   return async function propx(ctx, next) {
-    console.log(options);
+    console.log(ctx.method);
     await next();
   };
 };
